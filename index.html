@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insaf Milk - 100% Pure Fresh Cow's Milk</title>
+    <meta name="description" content="Authentic, pure, and fresh cow's milk straight from our rural dairy farm in Gazipur, Bangladesh to your glass.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons for crisp, flat 2D icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        insafBlue: '#0083FF',
+                        darkBg: '#0f172a',
+                        darkSurface: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom utilities */
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+        }
+        .dark .glass-nav {
+            background-color: rgba(15, 23, 42, 0.9);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-darkBg dark:text-gray-100 antialiased transition-colors duration-300">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 glass-nav border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-3">
+                    <img src="logo.jpg" alt="Insaf Milk Logo" class="h-12 w-12 object-contain rounded-full bg-white border border-gray-100" onerror="this.src='https://placehold.co/100x100/0083FF/white?text=IM'">
+                    <span class="font-bold text-2xl tracking-tight text-insafBlue">INSAF MILK</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="#home" class="hover:text-insafBlue transition-colors">Home</a>
+                    <a href="#about" class="hover:text-insafBlue transition-colors">About Us</a>
+                    <a href="#features" class="hover:text-insafBlue transition-colors">Why Us</a>
+                    <a href="#contact" class="hover:text-insafBlue transition-colors">Contact</a>
+                    
+                    <!-- Dark Mode Toggle (Desktop) -->
+                    <button id="theme-toggle-desktop" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                        <i class="ph ph-moon text-xl dark:hidden block"></i>
+                        <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                    </button>
+
+                    <a href="tel:01832382521" class="bg-insafBlue text-white px-5 py-2.5 rounded-md hover:bg-blue-700 transition-colors shadow-sm font-semibold flex items-center gap-2">
+                        <i class="ph ph-phone"></i> Call Now
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
+                        <i class="ph ph-moon text-xl dark:hidden block"></i>
+                        <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-900 dark:text-white p-2">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darkSurface border-b border-gray-100 dark:border-gray-800">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col font-medium">
+                <a href="#home" class="block px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">About Us</a>
+                <a href="#features" class="block px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">Why Us</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+                <a href="tel:01832382521" class="mt-4 inline-flex items-center gap-2 bg-insafBlue text-white px-4 py-3 rounded-md font-semibold justify-center">
+                    <i class="ph ph-phone"></i> 01832 382521
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2 space-y-6">
+            <div class="inline-block bg-blue-50 dark:bg-blue-900/30 text-insafBlue font-semibold px-4 py-1.5 rounded-full text-sm mb-2 border border-blue-100 dark:border-blue-800">
+                🌱 100% Pure & Organic
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                Fresh Cow's Milk, <br>
+                <span class="text-insafBlue">Straight from the Farm</span>
+            </h1>
+            <p class="text-lg text-gray-600 dark:text-gray-300 md:pr-12 leading-relaxed">
+                Experience the rich, authentic taste of real milk. From our rural family dairy in Gazipur straight to your glass—no artificial additives, just pure nourishment.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a href="#contact" class="bg-insafBlue text-white px-8 py-3.5 rounded-md hover:bg-blue-700 transition-colors shadow-sm font-semibold text-center text-lg">
+                    Order Delivery
+                </a>
+                <a href="#about" class="px-8 py-3.5 rounded-md border-2 border-gray-200 dark:border-gray-700 hover:border-insafBlue dark:hover:border-insafBlue hover:text-insafBlue transition-colors font-semibold text-center text-lg">
+                    Our Story
+                </a>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2">
+            <!-- Using a highly realistic Unsplash placeholder for fresh milk/farm aesthetics -->
+            <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Fresh Milk Pouring" class="rounded-2xl shadow-xl w-full object-cover h-[400px] md:h-[500px]">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-darkSurface border-y border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Our Authentic Rural Roots</h2>
+                <div class="h-1 w-20 bg-insafBlue mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed pt-4">
+                    Insaf Milk is a family-owned domestic dairy farm nestled in the heart of Gazipur, Bangladesh. We believe that true health begins with nature. That's why our cows are raised in a stress-free rural environment, fed with natural green fodder, and cared for with utmost dedication.
+                </p>
+                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    We stand firmly against the commercialization that strips milk of its natural goodness. When you choose Insaf Milk, you are choosing <strong class="text-gray-900 dark:text-white font-semibold">zero artificial additives, no preservatives, and 100% unadulterated purity</strong>. It's milk the way nature intended.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="features" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Why Choose Insaf Milk?</h2>
+            <p class="mt-4 text-gray-600 dark:text-gray-400">The difference is in the purity and the care we take.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Feature 1 -->
+            <div class="bg-white dark:bg-darkSurface p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                <div class="h-14 w-14 bg-blue-50 dark:bg-blue-900/30 text-insafBlue rounded-lg flex items-center justify-center mb-6">
+                    <i class="ph ph-drop text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Fresh & Natural</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Sourced directly from our own healthy, well-fed cows. We ensure our milk retains its natural creaminess, vitamins, and minerals.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white dark:bg-darkSurface p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                <div class="h-14 w-14 bg-blue-50 dark:bg-blue-900/30 text-insafBlue rounded-lg flex items-center justify-center mb-6">
+                    <i class="ph ph-shield-check text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">100% Unadulterated</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    We guarantee absolutely no water added, no milk powder mixing, and zero chemical preservatives. Pure milk, guaranteed.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white dark:bg-darkSurface p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                <div class="h-14 w-14 bg-blue-50 dark:bg-blue-900/30 text-insafBlue rounded-lg flex items-center justify-center mb-6">
+                    <i class="ph ph-truck text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Fast Local Delivery</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    From milking to your doorstep in hours. We maintain strict hygiene protocols during transit so your milk arrives fresh and safe.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-darkSurface border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-darkBg rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col lg:flex-row">
+                
+                <div class="p-10 lg:p-16 lg:w-1/2 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Ready to taste the purity?</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-10 text-lg">
+                        Contact us today to arrange a daily delivery or place a bulk order for your family or events.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full text-insafBlue shrink-0">
+                                <i class="ph ph-phone-call text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white text-lg">Call Us Direct</h4>
+                                <a href="tel:01832382521" class="block text-gray-600 dark:text-gray-400 hover:text-insafBlue dark:hover:text-insafBlue text-lg transition-colors mt-1">01832 382521</a>
+                                <a href="tel:01607069883" class="block text-gray-600 dark:text-gray-400 hover:text-insafBlue dark:hover:text-insafBlue text-lg transition-colors">01607 069883</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 pt-2">
+                            <div class="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full text-insafBlue shrink-0">
+                                <i class="ph ph-map-pin text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white text-lg">Farm Location</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-lg mt-1">
+                                    Gazipur,<br>
+                                    Bangladesh
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 bg-insafBlue p-10 lg:p-16 text-white flex flex-col justify-center items-center text-center">
+                    <img src="logo.jpg" alt="Insaf Milk Logo" class="h-32 w-32 object-contain rounded-2xl bg-white p-2 mb-6 shadow-lg" onerror="this.src='https://placehold.co/200x200/ffffff/0083FF?text=IM'">
+                    <h3 class="text-3xl font-bold mb-2">INSAF MILK</h3>
+                    <p class="text-blue-100 text-lg max-w-sm">
+                        Bringing the essence of rural Bangladesh straight to your dining table.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-darkBg py-8 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 dark:text-gray-400 text-sm">
+                &copy; <span id="year"></span> Insaf Milk. All rights reserved.
+            </p>
+            <div class="flex gap-4 text-gray-400">
+                <a href="#" class="hover:text-insafBlue transition-colors"><i class="ph ph-facebook-logo text-2xl"></i></a>
+                <a href="#" class="hover:text-insafBlue transition-colors"><i class="ph ph-whatsapp-logo text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Dark Mode Setup
+        const htmlElement = document.documentElement;
+        const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+        // Check local storage or system preference
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Toggle Function
+        function toggleTheme() {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        themeToggleDesktop.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+    </script>
+</body>
+</html>
